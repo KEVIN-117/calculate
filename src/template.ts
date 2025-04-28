@@ -30,8 +30,8 @@ export function buildForm() {
                   <div class="grid md:grid-cols-2 grid-cols-1 gap-4">
                     <div>
                       <select id="typeFee" name="type" class="w-full cyber-input rounded-lg">
-                        <option value="IV">Interes Variable</option>
-                        <option value="IF">Interes Fija</option>
+                        <option value="FIXED_FEE">Cuota Fija</option>
+                        <option value="VARIABLE_RATE">Cuota Variable</option>
                       </select>
                     </div>
                       <button type="submit" class="cyber-button w-full">
