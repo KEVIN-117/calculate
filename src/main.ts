@@ -41,7 +41,6 @@ function postData(event: Event) {
   const loanTime = form.loanTime.value as number
   const typeFee = form.typeFee.value as string
   console.log(`Loan: ${loan}, Annual Interest: ${annualInterest}, Loan Time: ${loanTime}, Type Fee: ${typeFee}`);
-
   if (typeFee === 'VARIABLE_RATE') {
     const germanSystem = new GermanSystem()
     data.length = 0
@@ -85,7 +84,6 @@ function postData(event: Event) {
       const capitalPayment = frenchSystem.calculateCapitalPayment(loan, loanTime)
       const monthlyInstallment = frenchSystem.calculateFixedMonthlyFee(loan, interest, capitalPayment)
       const remainingBalanceR = frenchSystem.calculateRemainingBalance(data[i - 1].getBalance(), capitalPayment)
-
       data.push(
         new DataItem(
           i,
@@ -97,6 +95,7 @@ function postData(event: Event) {
       )
     }
   }
+
   buildTableRow(data)
 
 }
